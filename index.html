@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables de las Leyes de Conservación</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">LeyesConservación</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#variables" class="nav-link">Variables</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#aplicaciones" class="nav-link">Aplicaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#recursos" class="nav-link">Recursos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero con efecto parallax -->
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Leyes de Conservación en Ingeniería</h1>
+            <p>Descubre los principios fundamentales que rigen el comportamiento de sistemas físicos y su aplicación en ingeniería. Las leyes de conservación son pilares esenciales para el análisis y diseño de sistemas en diversas disciplinas.</p>
+            <a href="#variables" class="hero-btn">Ver Variables</a>
+        </div>
+    </section>
+
+    <div class="container" id="variables">
+        <header>
+            <h1>Variables Generales de las Leyes de Conservación</h1>
+            <p class="subtitle">Estas variables son fundamentales para entender cómo se conservan las propiedades físicas en los sistemas</p>
+        </header>
+        
+        <div class="cards-container">
+            <!-- Tarjeta para Cambio -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="imagenes/variable_dependiente.png" alt="Representación del Cambio">
+                </div>
+                <div class="card-header">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h2>Cambio</h2>
+                </div>
+                <div class="card-content">
+                    <div class="info-item">
+                        <strong>Tipo</strong>
+                        <span>Variable dependiente</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Significado</strong>
+                        <span>Representa la variación de una magnitud (masa, energía, momentum, etc.) en el tiempo.</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Clasificación</strong>
+                        <span>Resultado de un balance → función del incremento y decremento.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta para Incremento -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="imagenes/variable_independiente.png" alt="Representación del Incremento">
+                </div>
+                <div class="card-header">
+                    <i class="fas fa-plus-circle"></i>
+                    <h2>Incremento</h2>
+                </div>
+                <div class="card-content">
+                    <div class="info-item">
+                        <strong>Tipo</strong>
+                        <span>Variable independiente de entrada</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Significado</strong>
+                        <span>Cantidad que entra o se suma al sistema.</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Clasificación</strong>
+                        <span>Variable de entrada</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta para Decremento -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="imagenes/salida.png" alt="Representación del Decremento">
+                </div>
+                <div class="card-header">
+                    <i class="fas fa-minus-circle"></i>
+                    <h2>Decremento</h2>
+                </div>
+                <div class="card-content">
+                    <div class="info-item">
+                        <strong>Tipo</strong>
+                        <span>Variable independiente de salida</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Significado</strong>
+                        <span>Cantidad que sale o se resta del sistema.</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Clasificación</strong>
+                        <span>Variable de salida</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 - Leyes de Conservación en Física | Diseñado para fines educativos</p>
+        </footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
