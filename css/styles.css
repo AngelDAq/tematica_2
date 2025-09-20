@@ -89,23 +89,41 @@ body {
 }
 
 /* HERO SECTION */
+/* HERO SECTION */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('imagenes/fondo-hero.jpg') center/cover fixed no-repeat;
+    background: url('/imagenes/fondo_hero.png') center/cover fixed no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
     position: relative;
-    background-image: url('imagenes/fondo-hero.jpg');
 }
 
+/* Capa oscura encima de la imagen */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* transparencia para que el texto se lea bien */
+    z-index: 1;
+}
+
+/* Asegurar que el contenido quede encima */
 .hero-content {
     max-width: 800px;
     padding: 2rem;
     z-index: 2;
+    position: relative;
 }
+
+
+
+
+
 
 .hero h1 {
     font-size: 3.5rem;
@@ -302,6 +320,7 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
+
 /* Responsive */
 @media (max-width: 768px) {
     .hamburger {
@@ -350,4 +369,424 @@ footer {
     .subtitle {
         font-size: 1.1rem;
     }
+}
+
+
+
+/* seccion de informacion */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Seccion paracaidas*/
+/* ============================= */
+/* SECCIÓN EJEMPLO PARACAIDISTA */
+/* ============================= */
+/* ============================= */
+/* SECCIÓN EJEMPLO PARACAIDISTA */
+/* ============================= */
+.paracaidista-section {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr; /* Texto - Paracaidista - Variables */
+  gap: 30px;
+  padding: 40px;
+  background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  align-items: flex-start;
+}
+
+/* Intro texto */
+.intro-text {
+  max-width: 500px;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #34495e;
+  text-align: justify;
+}
+
+/* Paracaidista animado */
+.paracaidista-container {
+  width: 150px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.paracaidista {
+  font-size: 70px;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: caer 10s linear infinite;
+}
+
+@keyframes caer {
+  from { top: -100px; }
+  to { top: 400px; }
+}
+
+/* Variables */
+.variables-list {
+  max-width: 450px;
+}
+
+.variable {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+
+.variable:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 150, 255, 0.7);
+}
+
+/* --- Responsive para móviles --- */
+@media (max-width: 768px) {
+  .paracaidista-section {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 20px;
+    text-align: center;
+  }
+
+  .intro-text {
+    margin: 0 auto;
+  }
+
+  .variables-list {
+    margin: 0 auto;
+  }
+
+  .paracaidista-container {
+    height: 250px;
+  }
+
+  .paracaidista {
+    font-size: 50px;
+  }
+}
+
+
+
+
+/* jeugo interactivo*/
+
+h1 { margin-bottom: 6px; }
+  .intro { margin-bottom: 18px; color: #555; }
+
+  /* ---------- Grid 2x2 ---------- */
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 900px;
+    margin: 0 auto 18px;
+  }
+
+  .card {
+    background: #fff;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card img {
+    width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  .card input.respuesta {
+    padding: 8px;
+    width: 92%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .card input.respuesta.correct {
+    border-color: #2ecc71;
+    box-shadow: 0 4px 12px rgba(46,204,113,0.15);
+  }
+  .card input.respuesta.wrong {
+    border-color: #e74c3c;
+    box-shadow: 0 4px 12px rgba(231,76,60,0.08);
+  }
+
+  .card .card-actions {
+    margin-top: 10px;
+    width: 100%;
+    display:flex;
+    gap:8px;
+    justify-content: center;
+  }
+
+  .btn-card, .btn-evaluar {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .18s, transform .08s;
+  }
+  .btn-card:hover, .btn-evaluar:hover { background: #2980b9; }
+  .btn-card:active, .btn-evaluar:active { transform: translateY(1px); }
+
+  .btn-evaluar { margin-top: 12px; padding: 10px 18px; font-size: 16px; }
+
+  /* ---------- Modal ---------- */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal.open { display: flex; }
+
+  .modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 480px;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+    position: relative;
+  }
+
+  .modal-content img { max-width: 150px; display:block; margin: 0 auto 12px; }
+
+  .modal-close {
+    position: absolute;
+    right: 12px; top: 8px;
+    font-size: 20px; cursor: pointer; color: #777;
+  }
+
+  /* Responsive: 1 columna en móvil */
+  @media (max-width: 760px) {
+    .grid-cards { grid-template-columns: 1fr; }
+  }
+
+
+
+
+  /* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Sección de la línea de tiempo */
+.timeline-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.timeline-header h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.timeline-header p {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Contenedor de eventos */
+.timeline-container {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 40px;
+}
+
+/* Línea vertical */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 4px;
+  height: 100%;
+  background: #6c5ce7; /* color línea principal */
+  border-radius: 2px;
+}
+
+/* Evento individual */
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Iconos de evento */
+.timeline-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border: 3px solid #6c5ce7;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Contenido del evento */
+.timeline-content {
+  background: #fff;
+  padding: 20px 25px;
+  margin-left: 70px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  border-left: 4px solid #6c5ce7;
+  transition: all 0.3s ease;
+}
+
+.timeline-content h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.timeline-content ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.timeline-content ul li {
+  margin-bottom: 5px;
+}
+
+/* Hover efecto */
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .timeline-container {
+    padding-left: 20px;
+  }
+  
+  .timeline-icon {
+    width: 50px;
+    height: 50px;
+    left: -15px;
+  }
+
+  .timeline-icon img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .timeline-content {
+    margin-left: 60px;
+    padding: 15px 20px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.95rem;
+  }
 }

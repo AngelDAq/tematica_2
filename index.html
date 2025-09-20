@@ -11,22 +11,22 @@
     <!-- Menú de navegación -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">LeyesConservación</a>
+            <a href="#" class="nav-logo">Metodos numericos</a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Inicio</a>
+                    <a href="#Inicio" class="nav-link">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a href="#variables" class="nav-link">Variables</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#aplicaciones" class="nav-link">Aplicaciones</a>
+                    <a href="#Informe" class="nav-link">Informe</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#recursos" class="nav-link">Recursos</a>
+                    <a href="#Ejemplo" class="nav-link">Ejemplo</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contacto" class="nav-link">Contacto</a>
+                    <a href="#juego" class="nav-link">Juego interactivo</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -38,14 +38,215 @@
     </nav>
 
     <!-- Sección Hero con efecto parallax -->
-    <section class="hero" id="inicio">
+    <section class="hero" id="Inicio">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Leyes de Conservación en Ingeniería</h1>
-            <p>Descubre los principios fundamentales que rigen el comportamiento de sistemas físicos y su aplicación en ingeniería. Las leyes de conservación son pilares esenciales para el análisis y diseño de sistemas en diversas disciplinas.</p>
+            <p> Pilares que permiten diseñar soluciones eficientes, seguras y sostenibles en cualquier campo de la ingeniería.</p>
             <a href="#variables" class="hero-btn">Ver Variables</a>
         </div>
     </section>
+    <!-- Sección de informacion principal --> 
+     <section class="timeline-section">
+  <div class="timeline-header">
+    <h2>Leyes de Conservación e Ingeniería</h2>
+    <p>Te explico paso a paso cómo funcionan las leyes de conservación y cómo se aplican en ingeniería, con ejemplos prácticos.</p>
+  </div>
+
+  <div class="timeline-container">
+
+    <!-- Evento 1: Introducción -->
+    <div class="timeline-event">
+      <div class="timeline-icon">
+        <img src="imagenes/linea_tiempo_1.png" alt="Leyes de Conservación"/>
+      </div>
+      <div class="timeline-content" >
+
+        <h3>Principios importantes en ingeniería</h3>
+        <p>
+          Aparte de la segunda ley de Newton, existen otros principios importantes en ingeniería. Entre los más importantes están las leyes de conservación. 
+          Estas son fundamentales en una gran variedad de complicados y poderosos modelos matemáticos, pero conceptualmente son fáciles de entender.
+          Se pueden reducir a la fórmula:
+          <br><strong>Cambio = incremento – decremento</strong> <br>(1.13)
+        </p>
+        <p>
+          Este es precisamente el formato que empleamos al usar la segunda ley de Newton para desarrollar un equilibrio de fuerzas en la caída del paracaidista [ecuación (1.8)]. Pese a su sencillez, la ecuación (1.13) representa una de las maneras fundamentales en que las leyes de conservación se emplean en ingeniería: predecir cambios con respecto al tiempo. A esta ecuación le llamaremos <strong>cálculo de variable-tiempo (o transitorio)</strong>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evento 2: Estado estacionario -->
+    <div class="timeline-event" >
+      <div class="timeline-icon">
+        <img src="imagenes/linea_tiempo_2.png" alt="Estado Estacionario"/>
+      </div>
+      <div class="timeline-content">
+        <h3>Cuando no hay cambio</h3>
+        <p>
+          Además de predecir cambios, las leyes de conservación se aplican también en casos en los que no existe cambio. Si el cambio es cero:
+          <br><strong>Cambio = 0 = incremento – decremento</strong>
+          <br>o bien:
+          <br><strong>Incremento = decremento</strong> <br>(1.14)
+        </p>
+        <p>
+          En este caso, el incremento y decremento deben estar en equilibrio. A esto se le llama <strong>cálculo en estado estacionario</strong> y tiene diversas aplicaciones en ingeniería.
+        </p>
+        <b>Mas abajo encontraras mas informacion de este concepto pues es importante entenderlo</b>
+      </div>
+    </div>
+
+    <!-- Evento 3: Flujo en tuberías -->
+    <div class="timeline-event" id="Informe">
+      <div class="timeline-icon">
+        <img src="imagenes/linea_tiempo_3.png" alt="Flujo de tuberías"/>
+      </div>
+      <div class="timeline-content">
+        <h3>Ejemplo: flujo de fluidos en tuberías</h3>
+        <p>
+          El incremento y el decremento también se le da una denominación especial, tiene diversas aplicaciones en ingeniería. Por ejemplo, para el flujo de un fluido incompresible en estado estacionario a través de tuberías:
+        </p>
+        <ul>
+          <li>Tubería 1: Flujo de entrada = 100</li>
+          <li>Tubería 2: Flujo de entrada = 80</li>
+          <li>Tubería 3: Flujo de salida = 120</li>
+          <li>Tubería 4: Flujo de salida = ? → se calcula que debe ser 60</li>
+        </ul>
+        <p>Este balance asegura que todo esté en equilibrio, aplicando la ley de conservación de masa.</p>
+      </div>
+    </div>
+
+    <!-- Evento 4: Caída del paracaidista -->
+    <div class="timeline-event">
+      <div class="timeline-icon">
+        <img src="imagenes/linea_tiempo_4.png" alt="Paracaidista"/>
+      </div>
+      <div class="timeline-content">
+        <h3>Caída del paracaidista</h3>
+        <p>
+          Para la caída del paracaidista, las condiciones del estado estacionario se cumplen cuando la fuerza total es igual a cero, o sea, <strong>dv/dt = 0</strong> en la ecuación (1.8):
+          <br><strong>mg = cv</strong> <br>(1.15)
+        </p>
+        <p>
+          Esto significa que las fuerzas hacia abajo (gravedad) y hacia arriba (resistencia del aire) están equilibradas, y podemos calcular la <strong>velocidad terminal</strong> como:
+          <br><strong>v = mg / c</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- Evento 5: Aplicaciones generales -->
+    <div class="timeline-event">
+      <div class="timeline-icon">
+        <img src="imagenes/linea_tiempo_5.png" alt="Aplicaciones en Ingeniería"/>
+      </div>
+      <div class="timeline-content">
+        <h3>Aplicaciones en ingeniería</h3>
+        <p>
+          Las ecuaciones (1.13) y (1.14), aunque simples, representan las dos maneras fundamentales de aplicar las leyes de conservación en ingeniería. Estas se usan para modelar problemas reales en diferentes ramas:
+        </p>
+        <ul>
+          <li><strong>Ingeniería química:</strong> balance de masa para estudiar reactores. El cambio de masa depende de lo que entra menos lo que sale.</li>
+          <li><strong>Ingeniería civil:</strong> fuerzas en equilibrio para analizar estructuras como armaduras sencillas.</li>
+          <li><strong>Ingeniería mecánica:</strong> análisis de movimientos transitorios o vibraciones de vehículos.</li>
+          <li><strong>Ingeniería eléctrica:</strong> balances de corriente y energía en circuitos. La corriente debe equilibrarse en los nodos, igual que el flujo en las tuberías. La suma algebraica de los cambios de voltaje alrededor de cualquier malla debe ser cero.</li>
+        </ul>
+        <p>
+          Estas aplicaciones nos muestran cómo los métodos numéricos y las técnicas matemáticas se integran a la práctica de ingeniería para resolver problemas del mundo real.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="container" id="variables">
         <header>
@@ -53,6 +254,7 @@
             <p class="subtitle">Estas variables son fundamentales para entender cómo se conservan las propiedades físicas en los sistemas</p>
         </header>
         
+
         <div class="cards-container">
             <!-- Tarjeta para Cambio -->
             <div class="card">
@@ -134,6 +336,137 @@
             <p>© 2023 - Leyes de Conservación en Física | Diseñado para fines educativos</p>
         </footer>
     </div>
+    <!-- EJEMPLO DEL PARACAIDISTA -->
+     <section class="paracaidista-section">
+  <div class="intro-text">
+    <h2>Ejemplo: Ley de Gravedad</h2>
+    <p>
+      En este ejemplo se toma como referencia un paracaidista en caída libre. 
+      Este caso nos ayuda a entender cómo se aplican las leyes de conservación, 
+      ya que intervienen parámetros constantes como la gravedad y la masa, 
+      junto con factores de resistencia como el coeficiente de arrastre.  
+      En un contexto real, estas variables reflejan el comportamiento del sistema: 
+      la <strong>masa (m)</strong> define al cuerpo, la <strong>gravedad (g)</strong> es la fuerza que lo atrae, 
+      el <strong>coeficiente de arrastre (c)</strong> representa la resistencia del aire, 
+      mientras que la <strong>velocidad (v)</strong> y su cambio en el tiempo (<strong>dv/dt</strong>) 
+      muestran cómo evoluciona el movimiento.  
+      Así podemos ver cómo, incluso en una situación cotidiana como un paracaidista descendiendo, 
+      las leyes físicas permiten modelar y explicar el fenómeno.
+    </p>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="paracaidista-container">
+    <div class="paracaidista">
+      🪂
+    </div>
+  </div>
+
+  <!-- Variables -->
+  <div class="variables-list" id="Ejemplo">
+    <div class="variable" id="var-m">
+      <h3>m (masa)</h3>
+      <p>Tipo: Constante física del cuerpo</p>
+      <p>Unidad: Kilogramos (kg)</p>
+      <p>Clasificación: Parámetro del sistema</p>
+    </div>
+
+    <div class="variable" id="var-g">
+      <h3>g (gravedad)</h3>
+      <p>Tipo: Constante física universal</p>
+      <p>Valor: ≈ 9.81 m/s²</p>
+      <p>Clasificación: Parámetro ambiental</p>
+    </div>
+
+    <div class="variable" id="var-c">
+      <h3>c (coeficiente de arrastre)</h3>
+      <p>Tipo: Constante experimental del sistema</p>
+      <p>Clasificación: Parámetro de resistencia</p>
+    </div>
+
+    <div class="variable" id="var-v">
+      <h3>v (velocidad)</h3>
+      <p>Tipo: Variable dependiente</p>
+      <p>Unidad: m/s</p>
+      <p>Clasificación: Estado dinámico del sistema</p>
+    </div>
+
+    <div class="variable" id="var-dvdt">
+      <h3>dv/dt</h3>
+      <p>Tipo: Variable dependiente (aceleración)</p>
+      <p>Unidad: m/s²</p>
+      <p>Clasificación: Cambio transitorio del sistema</p>
+    </div>
+  </div>
+</section>
+ 
+
+
+
+<h1 id="juego">Juego de las Leyes de Conservación</h1>
+  <p class="intro">Observa la expresión (imagen). Puedes evaluar <strong>por carta</strong> o <strong>todas a la vez</strong>. Usa palabras clave: <em>mecanica, quimica, electrica, civil</em> (acentos no son necesarios).</p>
+
+  <div class="grid-cards">
+    <!-- Card 1: Eléctrica (arriba izquierda) -->
+    <div class="card" data-field="eléctrica" data-answers="eléctrica|electrica|eléctrico|electrico|eléctrica" data-principio="Conservación de la energía y la carga" data-desc="En circuitos, la energía y la carga se conservan (leyes de Kirchhoff).">
+      <img src="imagenes/ley-de-ohm-juego.png" alt="Expresión Electricidad">
+      <input type="text" class="respuesta" placeholder="Escribe: ">
+      <div class="card-actions">
+        <button class="btn-card" onclick="evaluarCard(this)">Evaluar carta</button>
+      </div>
+    </div>
+
+    <!-- Card 2: Civil (arriba derecha) -->
+    <div class="card" data-field="civil" data-answers="civil|ingenieria civil|ingeniería civil|civíl" data-principio="Conservación del momentum (equilibrio de fuerzas)" data-desc="Estructuras y vigas mantienen el equilibrio de fuerzas; se aplica conservación de cantidad de movimiento en análisis estático/dinámico.">
+      <img src="imagenes/ecuación_estatica.png" alt="Expresión Civil">
+      <input type="text" class="respuesta" placeholder="Escribe: ">
+      <div class="card-actions">
+        <button class="btn-card" onclick="evaluarCard(this)">Evaluar carta</button>
+      </div>
+    </div>
+
+    <!-- Card 3: Mecánica (abajo izquierda) -->
+    <div class="card" data-field="mecánica" data-answers="mecanica|mecánica|mecánica|mecanico" data-principio="Conservación del momentum" data-desc="Análisis de fuerzas y movimiento en máquinas, motores y sistemas mecánicos.">
+      <img src="imagenes/mecanica.png" alt="Expresión Mecánica">
+      <input type="text" class="respuesta" placeholder="Escribe: ">
+      <div class="card-actions">
+        <button class="btn-card" onclick="evaluarCard(this)">Evaluar carta</button>
+      </div>
+    </div>
+
+    <!-- Card 4: Química (abajo derecha) -->
+    <div class="card" data-field="química" data-answers="quimica|química|químico|quimico" data-principio="Conservación de la masa" data-desc="En reacciones químicas la masa total se conserva; es la base de balances estequiométricos y procesos industriales.">
+      <img src="imagenes/qumica.png" alt="Expresión Química">
+      <input type="text" class="respuesta" placeholder="Escribe: ">
+      <div class="card-actions">
+        <button class="btn-card" onclick="evaluarCard(this)">Evaluar carta</button>
+      </div>
+    </div>
+  </div>
+
+ 
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="if(event.target.id==='modal') cerrarModal()">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <span class="modal-close" onclick="cerrarModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="./js/script.js"></script>
 </body>
