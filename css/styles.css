@@ -92,7 +92,7 @@ body {
 /* HERO SECTION */
 .hero {
     height: 100vh;
-    background: url('imagenes/fondo_hero.png') center cover fixed no-repeat;
+    background: url('/imagenes/fondo_hero.png') center cover fixed no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
